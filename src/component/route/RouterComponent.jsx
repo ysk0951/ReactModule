@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import UserListComponent from '../user/UserListComponent';
 
-const AppRout = () => {
+const AppRouter = () => {
     return(
         <div>
             <BrowserRouter>
@@ -20,3 +20,5 @@ const style = {
     color : 'gray',
     margin : '10px'
 }
+
+export default AppRouter;

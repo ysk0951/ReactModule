@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ApiService from '../../ApiService';
 
 class UserListComponent extends Component {
     constructor(props) {
@@ -13,12 +14,12 @@ class UserListComponent extends Component {
         this.reloadUserList();
     }
 
-    reloadUserList = () => {
+    reloadUserList = () => { 
         ApiService.fetchUsers()
         .then(res => {
             this.setState({
                     users: res.data
-            })
+            }) 
         })
         .catch(err => {
             console.log('reloadUserList() Error',err);
@@ -31,6 +32,7 @@ class UserListComponent extends Component {
     //edit
     //add
     render(){
+        return(
         <div>
             <h2>User List</h2>
             <table>
@@ -48,5 +50,8 @@ class UserListComponent extends Component {
                 </tbody>
             </table>
         </div>
+        );
     }
 }
+
+export default UserListComponent
