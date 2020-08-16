@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class UserListCompoenent extends Component {
+class UserListComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
